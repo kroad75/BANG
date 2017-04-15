@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F15490EF-BA34-454E-88CE-33E749734667}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BANG.CYBOSPLUS.Trader</RootNamespace>
+    <AssemblyName>BANG.CYBOSPLUS.Trader.Genius</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CHECKSIGNAL.cs" />
+    <Compile Include="CPMARKETWATCHS.cs" />
+    <Compile Include="CPSVR7225.cs" />
+    <Compile Include="CPSVR8091S.cs" />
+    <Compile Include="Genius.cs" />
+    <Compile Include="GeniusBaseSignal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="STOCKCUR.cs" />
+    <Compile Include="STOCKINDEXIS.cs" />
+    <Compile Include="STOCKJPBID.cs" />
+    <Compile Include="STOCKMST.cs" />
+    <Compile Include="GRADIENT.cs" />
+    <Compile Include="UP60MA.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BANG.COMMON\BANG.Common.Log\BANG.Common.Log.csproj">
+      <Project>{1ee72f3b-ea28-4c60-84df-a1da32dc1ad9}</Project>
+      <Name>BANG.Common.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DAL\BANG.CYBOSPLUS.DAL.ORACLE\BANG.CYBOSPLUS.DAL.ORACLE.csproj">
+      <Project>{e545b644-fcef-4dd9-a389-3f547b66fdf8}</Project>
+      <Name>BANG.CYBOSPLUS.DAL.ORACLE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GRADIENT_Readme.txt" />
+    <Content Include="PREDICTION_Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

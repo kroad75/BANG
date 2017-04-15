@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<configuration>
+    <system.serviceModel>
+        <bindings />
+        <client />
+    </system.serviceModel>
+  <appSettings>
+    <add key="ConnString" value="Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.1.48)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(sid=cp2)));User Id=sa;Password=miji1212;" />
+    <add key="STOCKGROUP" value="GROUP1" />
+  </appSettings>
+<startup><supportedRuntime version="v2.0.50727"/></startup></configuration>

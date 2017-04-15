@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ImageButton ID="ImageButton6" ImageUrl="~/refresh.png" runat="server" ToolTip="설정" OnClick="ImageButton6_Click" />
+            <asp:ImageButton ID="ImageButton1" PostBackUrl="~/Configuration.aspx" ImageUrl="~/설정.png" runat="server" ToolTip="설정" />
+            <asp:ImageButton ID="ImageButton2" PostBackUrl="~/OrderStock.aspx" ImageUrl="~/list.png" runat="server" ToolTip="투자종목 및 전략" />
+            <asp:ImageButton ID="ImageButton3" PostBackUrl="~/Default.aspx" ImageUrl="~/trading.png" runat="server" ToolTip="금일 거래현황" />
+            <asp:ImageButton ID="ImageButton4" PostBackUrl="~/Fund.aspx" ImageUrl="~/fund.png" runat="server" ToolTip="펀드" />
+            <asp:ImageButton ID="ImageButton5" PostBackUrl="~/BuyMethod.aspx" ImageUrl="~/Code.png" runat="server" ToolTip="전략 코드" />
+            <%--<asp:Menu ID="Menu1" runat="server">
+                <Items>
+                    <asp:MenuItem Text="이동">
+                        <asp:MenuItem Text="설정" NavigateUrl="~/Configuration.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="금일 투자종목 및 전략" NavigateUrl="~/OrderStock.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="금일 거래현황" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="펀드 현황" NavigateUrl="~/Fund.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="투자전략 코드표" NavigateUrl="~/BuyMethod.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                </Items>
+            </asp:Menu>--%>
+            <hr />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
